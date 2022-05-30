@@ -5,7 +5,8 @@ from .models import Category, Photo
 
 def gallery(request):
     categories = Category.objects.all()
-    context = {'categories':categories}
+    photos = Photo.objects.all()
+    context = {'categories':categories, 'photos' : photos}
     
     return render(request, 'pictures/gallery.html', context)
 
