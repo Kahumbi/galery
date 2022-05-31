@@ -25,6 +25,10 @@
                             <label>Add a category</label>
                             <select name="category" class="form-control">
                                 <option value="none">Choose a category...</option>
+
+                                {% for category in categories %}
+                                <option value='{{category.id}}'>{{category.name}}</option>
+                                {% endfor %}
                             </select>
                         </div>
 
