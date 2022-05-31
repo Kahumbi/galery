@@ -3,6 +3,16 @@ from .models import Category, Photo
 
 # Create your views here.
 
+def blaze(request):
+    searches = request.GET.get('searches')
+    if searches != None:
+        photos = Photo.objects.filter(category__name=searches)
+    context = {
+        'photos': photos,
+        'title':'search photos'
+    }
+    return render(request, 'pictures/glovo.html', context)
+
 def gallery(request):
     category = request.GET.get('category')
     if category == None:

@@ -15,13 +15,25 @@
         }
     </style>
 </head>
-<body class="m-5">
+<body class="" style="background-color: #610c20;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <a class="navbar-brand" href="#">Personal Gallery</a>
+          <form class="form-inline my-2 my-lg-0" action="{% url 'search'%}">
+            <input name="searches" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search Category</button>
+          </form>
+        </div>
+    </nav>
 
     <div class="containe">
         <div class="row">
             <div class="col-md-3">
                 <div class="card">
-                    <div class="card-header">
+                    <div class="card-header" style="background-color: #2E0249; color: white;" >
                       Categories
                     </div>
                     <ul class="list-group list-group-flush">
@@ -51,7 +63,7 @@
                         <div class="card-body">
                           <small>Category: {{photo.category.name}}</small>
                         </div>
-                        <a href="{% url 'photo' photo.id %}" class="btn btn-outline-info btn-sm m-1" >Views</a>
+                        <a href="{% url 'photo' photo.id %}" class="btn btn-outline-info btn-sm m-1" >Click view image</a>
                     </div>
                    </div>
                    {% empty %}
