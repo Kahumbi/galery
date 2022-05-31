@@ -45,9 +45,9 @@
                         <img class="image-thumbnail" src="{{photo.image.url}}" alt="car image">
 
                         <div class="card-body">
-                          <small>Category: Cars</small>
+                          <small>Category: {{photo.category.name}}</small>
                         </div>
-                        <a href="{% url 'photo' 1 %}" class="btn btn-outline-info btn-sm m-1" >Views</a>
+                        <a href="{% url 'photo' photo.id %}" class="btn btn-outline-info btn-sm m-1" >Views</a>
                     </div>
                    </div>
                    {% empty %}
