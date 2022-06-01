@@ -27,8 +27,8 @@ Users will be able to:
 | Behaviour | Input | Output |
 | :---------------- | :---------------: | ------------------: |
 | Create a new category | **Add a new category** | New users can create a category |
-| Search for an image | **Add an image fike** | Post an image  |
-| hover on images | **Click on view image** | get redirect to image page |
+| Search for an image | **Add an image file** | Post an image  |
+| hover on images | **Click on view image** | Get redirect to image page |
 | Add a comment | **Comment is required** | Display the comment below image |
 ​
 ​
